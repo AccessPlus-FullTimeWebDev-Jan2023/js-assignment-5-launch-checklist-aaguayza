@@ -19,17 +19,23 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 function validateInput(testInput) {
    if(testInput === ""){
     return "Empty"
-   }else if(Number.isInteger(Number(testInput)) === false){
+   }else if(isNaN(Number(testInput))){
     return "Not a Number"
-   }else if(Number.isInteger(Number(testInput))){
+   }else if(!isNaN(Number(testInput))){
     return "Is a Number"
    }
 }
-console.log(validateInput("1010101"))
+// console.log(validateInput("999"))
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-   
+    console.log(`Document input: ${validateInput(document)}`)
+    console.log(`List input: ${validateInput(list)}`)
+    console.log(`Pilot input: ${validateInput(pilot)}`)
+    console.log(`Copilot input: ${validateInput(copilot)}`)
+    console.log(`Fuel level input: ${validateInput(fuelLevel)}`)
+    console.log(`Cargo level input ${validateInput(cargoLevel)}`)
 }
+formSubmission('something','something else','999','','hellp','000')
 
 async function myFetch() {
     let planetsReturned;
