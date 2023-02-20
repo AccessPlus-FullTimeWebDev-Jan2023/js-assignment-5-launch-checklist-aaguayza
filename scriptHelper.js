@@ -27,7 +27,8 @@ function validateInput(testInput) {
     }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    
+    list.style.visibility = "visible"
+    document.getElementById("pilotStatus").innerHTML = `${pilot} is ready for launch`
 }
 
 

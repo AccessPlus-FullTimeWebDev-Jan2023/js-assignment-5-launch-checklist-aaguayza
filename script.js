@@ -1,5 +1,3 @@
-
-
 // Write your JavaScript code here!
 window.addEventListener("load", function() {
     let inputform = document.getElementById("launchForm")
@@ -7,18 +5,26 @@ window.addEventListener("load", function() {
     let copilotName = document.querySelector("input[name=copilotName]");
     let fuelLevel = document.querySelector("input[name=fuelLevel]");
     let cargoMass = document.querySelector("input[name=cargoMass]");
+    let itemList = document.getElementById("faultyItems")
+
     inputform.addEventListener("submit",function(event){
+        event.preventDefault()
+
         if(validateInput(pilotName.value) === "Empty" || validateInput(copilotName.value) === "Empty" || validateInput(fuelLevel.value) === "Empty" || validateInput(cargoMass.value) === "Empty"){
             alert("All fields must be filled")
-            event.preventDefault()
         }else if(validateInput(pilotName.value) === "Is a Number" || validateInput(copilotName.value) === "Is a Number"  ){
             alert("Pilot and copilot names must not include numbers")
-            event.preventDefault()
         }else if(validateInput(fuelLevel.value) === "Not a Number" ||validateInput(cargoMass.value) === "Not a Number"){
             alert("Fuel level and cargo mass must be numbers")
-            event.preventDefault()
+        }else{
+            formSubmission(document, itemList, pilotName.value, copilotName.value, fuelLevel.value, cargoMass.value )
         }
+       
+
+       
+
         });
+
     
 
    let listedPlanets;
