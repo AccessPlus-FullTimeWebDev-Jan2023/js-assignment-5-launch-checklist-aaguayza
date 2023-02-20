@@ -2,7 +2,16 @@
 
 window.addEventListener("load", function() {
     
-
+    let inputform = document.getElementById("launchForm")
+    let pilotName = document.querySelector("input[name=pilotName]");
+    let copilotName = document.querySelector("input[name=copilotName]");
+    let fuelLevel = document.querySelector("input[name=fuelLevel]");
+    let cargoMass = document.querySelector("input[name=cargoMass]");
+    inputform.addEventListener("submit",function(){
+        if(pilotName.value === "" || copilotName.value === "" || fuelLevel.value === "" || cargoMass.value === ""){
+            alert("All fields must be filled")
+        }
+        });
 
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
