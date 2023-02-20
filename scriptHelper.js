@@ -27,8 +27,23 @@ function validateInput(testInput) {
     }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    list.style.visibility = "visible"
-    document.getElementById("pilotStatus").innerHTML = `${pilot} is ready for launch`
+    document.getElementById("pilotStatus").innerHTML = `Pilot ${pilot} is ready for launch`
+    document.getElementById("copilotStatus").innerHTML = `Copilot ${copilot} is ready for launch`
+
+    if(fuelLevel < 10000){
+        list.style.visibility = "visible"
+        document.getElementById("fuelStatus").innerHTML = `Fuel level too low for launch`
+    }
+    if(cargoLevel > 10000){
+        list.style.visibility = "visible"
+        document.getElementById("cargoStatus").innerHTML = `Cargo mass too heavy for launch`
+    }
+    if(cargoLevel < 10000 && fuelLevel > 10000){
+        list.style.visibility = "visible"
+        document.getElementById("launchStatus").style.color = "green"
+        document.getElementById("launchStatus").innerHTML = "Shuttle is ready for launch"
+    }
+    
 }
 
 
