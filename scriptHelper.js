@@ -24,6 +24,11 @@ function validateInput(testInput) {
    }else if(!isNaN(Number(testInput))){
     return "Is a Number"
    }
+   ///Below is to chcek that all the things are actually with an value assigned. 
+   let pilotName = document.querySelector("input[name=pilotName]");
+   let copilotName = document.querySelector("input[name=copilotName]");
+   let fuelLevel = document.querySelector("input[name=fuelLevel]");
+   let cargoMass = document.querySelector("input[name=cargoMass]");
 }
 // console.log(validateInput("999"))
 
