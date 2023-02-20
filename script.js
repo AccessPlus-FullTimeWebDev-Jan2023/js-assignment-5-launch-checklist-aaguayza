@@ -6,11 +6,13 @@ window.addEventListener("load", function() {
     let fuelLevel = document.querySelector("input[name=fuelLevel]");
     let cargoMass = document.querySelector("input[name=cargoMass]");
     inputform.addEventListener("submit",function(event){
-        if(pilotName.value === "" || copilotName.value === "" || fuelLevel.value === "" || cargoMass.value === ""){
+        if(validateInput(pilotName.value) === "Empty" || validateInput(copilotName.value) === "Empty" || validateInput(fuelLevel.value) === "Empty" || validateInput(cargoMass.value) === "Empty"){
             alert("All fields must be filled")
             event.preventDefault()
         }
+
         });
+    
 
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
