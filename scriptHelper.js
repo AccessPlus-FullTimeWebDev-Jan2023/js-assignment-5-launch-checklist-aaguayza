@@ -42,9 +42,9 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         document.getElementById("launchStatus").style.color = "rgb(199, 37, 78)"
         document.getElementById("launchStatus").innerHTML = "Shuttle Not Ready for Launch"
     }
-    if(cargoLevel < 10000 && fuelLevel > 10000){
+    if(cargoLevel <= 10000 && fuelLevel >= 10000){
         list.style.visibility = "visible"
-        document.getElementById("launchStatus").style.color = "green"
+        document.getElementById("launchStatus").style.color = "rgb(65, 159, 106)"
         document.getElementById("launchStatus").innerHTML = "Shuttle is Ready for Launch"
     }
     

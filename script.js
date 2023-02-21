@@ -1,6 +1,4 @@
 
-
-
 // Write your JavaScript code here!
 window.addEventListener("load", function() {
     let inputform = document.getElementById("launchForm")
@@ -20,7 +18,7 @@ window.addEventListener("load", function() {
         }else if(validateInput(fuelLevel.value) === "Not a Number" ||validateInput(cargoMass.value) === "Not a Number"){
             alert("Fuel level and cargo mass must be numbers")
         }else{
-            formSubmission(document, itemList, pilotName.value, copilotName.value, fuelLevel.value, cargoMass.value )
+            formSubmission(window.document, itemList, pilotName.value, copilotName.value, fuelLevel.value, cargoMass.value )
         }
         });
 
