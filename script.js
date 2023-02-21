@@ -24,7 +24,6 @@ window.addEventListener("load", function() {
         }
         });
 
-        console.log(myFetch())
 
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
