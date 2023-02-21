@@ -11,9 +11,9 @@ window.addEventListener("load", function() {
     let statusCheck = document.getElementById("launchStatusCheck")
 
     itemList.style.visibility = "hidden";
-    statusCheck.style.visibility = "hidden";
-    document.getElementById(fuelStatus).textContent = "Fuel level high enough for launch"
-    document.getElementById(cargoStatus).textContent = "Cargo mass low enough for launch"
+    // statusCheck.style.visibility = "hidden";
+    document.getElementById("fuelStatus").innerHTML = "Fuel level high enough for launch"
+    document.getElementById("cargoStatus").innerHTML = "Cargo mass low enough for launch"
 
     inputform.addEventListener("submit",function(event){
         event.preventDefault()
