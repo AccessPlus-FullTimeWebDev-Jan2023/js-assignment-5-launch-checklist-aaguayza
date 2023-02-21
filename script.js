@@ -9,10 +9,12 @@ window.addEventListener("load", function() {
     let itemList = document.getElementById("faultyItems")
     let planetTarget = document.getElementById("missionTarget")
     let statusCheck = document.getElementById("launchStatusCheck")
+
+    itemList.style.visibility = "hidden"
+    statusCheck.style.visibility = "hidden"
+    
     inputform.addEventListener("submit",function(event){
         event.preventDefault()
-        itemList.style.visibility = "hidden"
-        statusCheck.style.visibility = "hidden"
        
 
         if(validateInput(pilotName.value) === "Empty" || validateInput(copilotName.value) === "Empty" || validateInput(fuelLevel.value) === "Empty" || validateInput(cargoMass.value) === "Empty"){
