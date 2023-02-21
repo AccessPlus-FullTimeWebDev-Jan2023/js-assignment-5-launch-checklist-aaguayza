@@ -27,6 +27,7 @@ function validateInput(testInput) {
     }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
+    list.style.visibility = "hidden"
     document.getElementById("pilotStatus").innerHTML = `Pilot ${pilot} is ready for launch`
     document.getElementById("copilotStatus").innerHTML = `Co-pilot ${copilot} is ready for launch`
 
@@ -46,7 +47,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         document.getElementById("launchStatus").style.color = "rgb(65, 159, 106)"
         document.getElementById("launchStatus").innerHTML = "Shuttle is Ready for Launch"
     }
-    list.style.visibility = "hidden"
+    list.style.visibility = "visible"
 }
 
 
