@@ -11,7 +11,7 @@ window.addEventListener("load", function() {
     let statusCheck = document.getElementById("launchStatusCheck")
     inputform.addEventListener("submit",function(event){
         event.preventDefault()
-
+        itemList.style.visibility = "hidden"
         statusCheck.style.visibility = "hidden"
        
 
