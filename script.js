@@ -10,9 +10,11 @@ window.addEventListener("load", function() {
     let planetTarget = document.getElementById("missionTarget")
     let statusCheck = document.getElementById("launchStatusCheck")
 
-    itemList.style.visibility = "hidden"
-    statusCheck.style.visibility = "hidden"
-    
+    itemList.style.visibility = "hidden";
+    statusCheck.style.visibility = "hidden";
+    document.fuelStatus.innerHTML = "Fuel level high enough for launch"
+    document.cargoStatus.innerHTML = "Cargo mass low enough for launch"
+
     inputform.addEventListener("submit",function(event){
         event.preventDefault()
        
