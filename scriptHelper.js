@@ -28,18 +28,18 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     document.getElementById("pilotStatus").innerHTML = `Pilot ${pilot} is ready for launch`
-    document.getElementById("copilotStatus").innerHTML = `Copilot ${copilot} is ready for launch`
+    document.getElementById("copilotStatus").innerHTML = `Co-pilot ${copilot} is ready for launch`
 
     if(fuelLevel < 10000){
         list.style.visibility = "visible"
         document.getElementById("fuelStatus").innerHTML = `Fuel level too low for launch`
-        document.getElementById("launchStatus").style.color = "red"
+        document.getElementById("launchStatus").style.color = "rgb(65, 159, 106)"
         document.getElementById("launchStatus").innerHTML = "Shuttle Not Ready for Launch"
     }
     if(cargoLevel > 10000){
         list.style.visibility = "visible"
         document.getElementById("cargoStatus").innerHTML = `Cargo mass too heavy for launch`
-        document.getElementById("launchStatus").style.color = "red"
+        document.getElementById("launchStatus").style.color = "rgb(65, 159, 106)"
         document.getElementById("launchStatus").innerHTML = "Shuttle Not Ready for Launch"
     }
     if(cargoLevel < 10000 && fuelLevel > 10000){
