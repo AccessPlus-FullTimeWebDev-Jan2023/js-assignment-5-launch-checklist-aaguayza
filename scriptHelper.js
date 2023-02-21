@@ -47,7 +47,9 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         document.getElementById("launchStatus").style.color = "rgb(65, 159, 106)"
         document.getElementById("launchStatus").innerHTML = "Shuttle is Ready for Launch"
     }
+    document.getElementById("launchStatusCheck").style.visibility = "visible"
     list.style.visibility = "visible"
+
 }
 
 

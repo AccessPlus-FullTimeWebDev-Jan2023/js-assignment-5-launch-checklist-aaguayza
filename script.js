@@ -8,11 +8,13 @@ window.addEventListener("load", function() {
     let cargoMass = document.querySelector("input[name=cargoMass]");
     let itemList = document.getElementById("faultyItems")
     let planetTarget = document.getElementById("missionTarget")
+    let statusCheck = document.getElementById("launchStatusCheck")
     inputform.addEventListener("submit",function(event){
         event.preventDefault()
-        itemList.style.visibility = "hidden"
-        document.getElementById("fuelStatus").innerHTML = `Fuel level high enough for launch`
-        document.getElementById("cargoStatus").innerHTML = `Cargo mass low enough for launch`
+
+        statusCheck.style.visibility = "hidden"
+       
+
         if(validateInput(pilotName.value) === "Empty" || validateInput(copilotName.value) === "Empty" || validateInput(fuelLevel.value) === "Empty" || validateInput(cargoMass.value) === "Empty"){
             alert("All fields must be filled")
         }else if(validateInput(pilotName.value) === "Is a Number" || validateInput(copilotName.value) === "Is a Number"  ){
