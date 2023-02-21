@@ -76,8 +76,7 @@ describe ("GRADING DOM MANIPULATION TEST: ", function () {
 
    it("Launch Checklist when cargo too heavy for launch", function() {
      // Shuttle should not be ready for launch, cargo too high
-     let fuelArg = 10000
-     studentFunctions.formSubmission(window.document, list, "Chris", "Bob", fuelArg, 100000);
+     studentFunctions.formSubmission(window.document, list, "Chris", "Bob", 10000, 100000);
      console.log(fuelArg);
      expect(list.style.visibility).toEqual("visible");
      expect(h2.style.color).toEqual("rgb(199, 37, 78)");
