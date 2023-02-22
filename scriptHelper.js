@@ -28,8 +28,8 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     list.style.visibility = "hidden"
-    // document.getElementById("pilotStatus").innerHTML = `Pilot ${pilot} is ready for launch`
-    // document.getElementById("copilotStatus").innerHTML = `Co-pilot ${copilot} is ready for launch`
+    document.getElementById("pilotStatus").innerHTML = `Pilot ${pilot} is ready for launch`
+    document.getElementById("copilotStatus").innerHTML = `Co-pilot ${copilot} is ready for launch`
 
     if(cargoLevel <= 10000 && fuelLevel >= 10000){
         document.getElementById("launchStatus").style.color = "rgb(65, 159, 106)"
