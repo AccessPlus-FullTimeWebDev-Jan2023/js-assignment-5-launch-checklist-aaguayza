@@ -19,17 +19,17 @@ window.addEventListener("load", function() {
         event.preventDefault()
        
 
-        if(validateInput(pilotName.value) === "Empty" || validateInput(copilotName.value) === "Empty" || validateInput(fuelLevel.value) === "Empty" || validateInput(cargoMass.value) === "Empty"){
-            alert("All fields must be filled")
-        }else if(validateInput(pilotName.value) === "Is a Number" || validateInput(copilotName.value) === "Is a Number"  ){
-            alert("Pilot and copilot names must not include numbers")
-        }else if(validateInput(fuelLevel.value) === "Not a Number" ||validateInput(cargoMass.value) === "Not a Number"){
-            alert("Fuel level and cargo mass must be numbers")
-        }else{
-            formSubmission(window.document, itemList, pilotName.value, copilotName.value, Number(fuelLevel.value), Number(cargoMass.value) )
-        }
-        });
-
+        // if(validateInput(pilotName.value) === "Empty" || validateInput(copilotName.value) === "Empty" || validateInput(fuelLevel.value) === "Empty" || validateInput(cargoMass.value) === "Empty"){
+        //     alert("All fields must be filled")
+        // }else if(validateInput(pilotName.value) === "Is a Number" || validateInput(copilotName.value) === "Is a Number"  ){
+        //     alert("Pilot and copilot names must not include numbers")
+        // }else if(validateInput(fuelLevel.value) === "Not a Number" ||validateInput(cargoMass.value) === "Not a Number"){
+        //     alert("Fuel level and cargo mass must be numbers")
+        // }else{
+        //     formSubmission(window.document, itemList, pilotName.value, copilotName.value, Number(fuelLevel.value), Number(cargoMass.value) )
+        // }
+        // });
+        formSubmission(window.document, itemList, pilotName.value, copilotName.value, Number(fuelLevel.value), Number(cargoMass.value) )
 
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
@@ -45,3 +45,4 @@ window.addEventListener("load", function() {
    })
    
 });
+})
